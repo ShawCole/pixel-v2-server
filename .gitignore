@@ -1,9 +1,12 @@
-.env
-.env.*
 /vendor/
-/node_modules/
-/storage/
-/logs/
+/.env
+/.env.local
+/.env.*.local
+
+/storage/*
+!/storage/logs/
+!/storage/logs/.gitkeep
+
 .DS_Store
 .idea/
 .vscode/

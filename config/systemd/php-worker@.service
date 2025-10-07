@@ -1,0 +1,12 @@
+[Unit]
+Description=Pixel v2 PHP Worker - %i
+After=network.target
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/pixel-v2
+EnvironmentFile=/var/www/pixel-v2/.env
+ExecStart=/usr/bin/php /var/www/pixel-v2/src/workers/%i.php
+Restart=always
+[Install]
+WantedBy=multi-user.target
